@@ -1,0 +1,43 @@
+contenido del curso:
+lunes: configuracion y uso de git
+
+usuario humner contraseña Hiperzeus26343791
+
+
+
+
+Create a new repository on the command line
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/hiperzeus/humner.git
+git push -u origin master
+
+Push an existing repository from the command line
+
+git remote add origin https://github.com/hiperzeus/humner.git
+git push -u origin master
+
+
+para usar con http --- https://github.com/hiperzeus/humner.git
+
+para usar con ssh ------ git@github.com:hiperzeus/humner.git
+
+
+
+martes: modificacion de paquetes a partir de las fuentes, empaquetamiento de las modificaciones para su instalacion
+
+1 se crea un directorio llamado sl y para descargar las fuentes del programa sl
+2 se agrega el repositorio de las fuentes de debian deb-src http://ftp.debian.org/debian stable main contrib non-free luego se actualizan los repositorios
+3 se descargan las fuentes del programa sl para su modificacion apt-get sources sl
+4 modificamos el archivo sl.h
+5 dpkg-builpackage -us -uc
+6 dpkg-source --commit
+7 dpkg-builpackage -us -uc
+8 cd ..
+9 instalamos el paquete
+
+
+algunos paquetes crean el .deb solo con la ejecucion de  dpkg-builpackage -us -uc
+
